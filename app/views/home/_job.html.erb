@@ -1,0 +1,16 @@
+
+<div class="jobs">
+  <div class="jobs-container">
+    <h1>Discover all <span>career paths</span></h1>
+  </div>
+  <div class="job-cards">
+    <% @jobs.each do |j| %>
+      <div class="card-job" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= j.photo %>') ; background-size: cover">
+        <%= link_to job_path(j) do %>
+        <strong><%= j.title %></strong><br>
+        <em><%= j.subjobs.count %> tracks</em>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

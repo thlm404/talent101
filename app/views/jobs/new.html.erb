@@ -1,0 +1,15 @@
+
+<h1>New subjob</h1>
+  <div class="general-padding-20">
+    <%= simple_form_for @subjob do |f| %>
+      <div class="d-flex justify-content-between">
+        <%= f.input :title, as: :string, required: true, placeholder: "#{job.subjob.first.title}" %>
+      </div>
+      <div class="d-flex justify-content-between">
+          <%= f.input :note_patient %>
+      </div>
+      <div class="d-flex justify-content-end">
+        <%= f.button :submit, "Add new subjob", class: "btn btn-primary margin-right-50" %>
+      </div>
+    </div>
+  <% end %>

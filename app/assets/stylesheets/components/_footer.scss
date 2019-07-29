@@ -1,0 +1,43 @@
+.page-footer {
+  margin-top: 0px;
+  padding-top: 15vw;
+  background-color: black;
+  color: white;
+  font-size: 1.5vw;
+  .row {
+    justify-content: center;
+  }
+  li, a {
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+  }
+}
+
+
+.footer-media {
+  color: white;
+}
+
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  .socialitem {
+    padding: 0 3vw;
+  }
+  padding-bottom: 3vw
+}
+
+
+.looking-for-talents {
+  text-align: center;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  position: relative;
+  bottom: -10vw;
+  padding: 5vw;
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
+

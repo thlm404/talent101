@@ -1,0 +1,29 @@
+.navbar-talent101 {
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  height: 9vh;
+  width: 100%;
+  align-items: center;
+  border-bottom: 0.2vh solid rgba(0, 0, 0, 0.2);
+
+  .navbar-collapse {
+  flex-grow: 0;
+  background: white;
+  }
+
+  .navbar-brand img {
+  width: 65px;
+  }
+
+}
+
+#navbarDropdown {
+  background-color: white
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 50px;
+}
+

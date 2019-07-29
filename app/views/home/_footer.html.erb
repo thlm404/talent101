@@ -1,0 +1,94 @@
+  <div class="looking-for-talents">
+    <h2 style="font-size: 2vw">You're looking for talents?</h2>
+    <p style="font-size: 1.5vw; font-weight: lighter">Get help from the right people to jumpstart your project</p>
+    <%= link_to "Join now", new_user_session_path, class: "button" %>
+  </div>
+
+<!-- Footer -->
+<footer class="page-footer">
+
+
+
+<!-- Footer Links -->
+<div class="container-fluid text-center text-md-left">
+  <!-- Grid row -->
+  <div class="row">
+    <!-- Grid column -->
+
+    <hr class="clearfix w-100 d-md-none pb-3">
+
+
+    <!-- Grid column -->
+    <div class="col-md-3 mb-md-0 mb-3">
+      <!-- Links -->
+      <h5 class="text-uppercase" style="font-size: 2vw">Jobs in digital</h5>
+      <ul class="list-unstyled">
+        <% @jobs.each do |j| %>
+          <li>
+            <%= link_to job_path(j) do %>
+            <%= j.title %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-md-3 mb-md-0 mb-3">
+      <!-- Links -->
+      <h5 class="text-uppercase" style="font-size: 2vw">Talent101</h5>
+      <ul class="list-unstyled">
+        <li>
+          <a href="#!">How it works</a>
+        </li>
+        <li>
+          <a href="#!">Recruitment tips for talents</a>
+        </li>
+        <li>
+          <a href="#!">TALENT101 for startups</a>
+        </li>
+        <li>
+          <a href="#!">TALENT101 for incubators</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-md-3 mb-md-0 mb-3">
+      <!-- Links -->
+      <h5 class="text-uppercase" style="font-size: 2vw">Community</h5>
+      <ul class="list-unstyled">
+        <li>
+          <a href="#!">Become a talent</a>
+        </li>
+        <li>
+          <a href="#!">Startups on TALENT101</a>
+        </li>
+        <li>
+          <a href="#!">Partners on TALENT101</a>
+        </li>
+        <li>
+          <a href="#!">Resources</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Grid column -->
+  </div>
+  <!-- Grid row -->
+
+</div>
+<!-- Footer Links -->
+
+<!-- Copyright -->
+<div class="footer-media text-center py-3">How to find us</div>
+<div class="socialmedia">
+    <div class="socialitem"><i class="fab fa-linkedin-in"></i></div>
+    <div class="socialitem"><i class="fab fa-medium-m"></i></div>
+    <div class="socialitem"><i class="fab fa-pinterest-p"></i></div>
+</div>
+<!-- Copyright -->
+
+</footer>
+<!-- Footer -->

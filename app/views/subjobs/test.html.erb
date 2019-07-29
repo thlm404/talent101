@@ -1,0 +1,58 @@
+<div style="margin-top: 15px;">
+  <div class="d-flex justify-content-around">
+    <div class="card_free text-responsivity-patient-info" style="height: fit-content; width: 25vw;">
+      <div id="selected_category" class="creation_category border-bottom">
+        <h5>New subjob</h5>
+        <p>Main information on this new job</p>
+      </div>
+
+      <div class="creation_category border-bottom">
+      <h5>ABOUT THE JOB</h5>
+        <p>Fill all interesting information about the job</p>
+      </div>
+      <div class="creation_category border-bottom">
+        <h5>GOALS & RESPONSIBILITIES</h5>
+        <p>Share your curated content</p>
+      </div>
+      <div class="creation_category">
+        <h5>RECQUIREMENTS</h5>
+        <p>Gather all the best trainings</p>
+      </div>
+      <div class="creation_category">
+        <h5>RESPONSIBILITIES & TASKS & TOOLS</h5>
+        <p>Gather all the best trainings</p>
+      </div>
+      <div class="creation_category">
+        <h5>TEAM MATES</h5>
+        <p>Gather all the best trainings</p>
+      </div>
+      <div class="creation_category">
+        <h5>CAREER OPPORTUNITIES & SALARY</h5>
+        <p>Gather all the best trainings</p>
+      </div>
+      <div class="creation_category">
+        <h5>READINGS</h5>
+        <p>Gather all the best trainings</p>
+      </div>
+    </div>
+
+    <%= simple_form_for Subjob.new do |f| %>
+      <div class="card general-padding-20" style="width: 55vw">
+        <h3>New subjob</h3>
+        <div class="d-flex justify-content-between">
+          <div style="width: 45%">
+            <%= f.association :job, label_method: lambda { |job| "#{job.title}"} %>
+            <%= f.input :title, placeholder: "UX design" %>
+            <%= f.input :description, placeholder: "UX design is dope man" %>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end">
+          <%= link_to "PASSER", home_path, class: "btn btn-outline-secondary margin-right-50" %>
+          <%= f.button :submit, "SUIVANT", class: "btn btn-primary margin-right-50" %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>

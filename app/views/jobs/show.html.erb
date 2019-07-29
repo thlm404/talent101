@@ -1,0 +1,45 @@
+  <%= render 'jobs/components/job-banner' %>
+<div class="main-container" style="width: 100%; padding: 2vw 10vw">
+  <p style="font-size: 1.5vw; font-weight: lighter;"><%= @job.description %></p>
+  <p style="font-size: 1.5vw; font-weight: lighter;">It falls into <%= @job.subjobs.count %> parts:
+    <ul class="list-unstyled" style="font-size: 1.5vw; font-weight: lighter;">
+      <% @job.subjobs.each do |s| %>
+        <li>
+          <%= s.title %>
+        </li>
+      <% end %>
+    </ul>
+  </p>
+
+  <div class="tracks">
+    <h2 style="text-align: center; font-size: 2vw"><%= @job.subjobs.count %> Tracks</h2>
+
+    <!-- <button type="button" class="btn" data-toggle="modal" data-target="#newSubjobModal">
+      + New subjob
+    </button> -->
+    <%= link_to '+ New subjob', new_subjob_path %>
+
+      <% @job.subjobs.each do |j| %>
+        <div class="subjob-card" style="display: grid; grid-template-columns: 3fr 2fr; margin: 2vw 0vw; align-items: center; border: 1px solid black; border-radius: 5px">
+            <div class="subjob-card-info" style="padding: 0 2vw">
+              <h3 style="font-size: 2vw"><%= j.title %></h3>
+              <p style="font-size: 1.5vw; font-weight: lighter"><%= j.description %></p>
+              <!-- <span class="subjob-button">Learn more</span> -->
+              <%= link_to 'Learn more', subjob_path(j), class: "subjob-button" %>
+            </div>
+            <div class="subjob-card-photo" style="width: 100%; height: 100%"><img src="<%= j.photo %>" alt="" style="height: 100%; width: 100%; border-radius: 5px"></div>
+        </div>
+      <% end %>
+  </div>
+
+  <div class="lets-talk" style="margin-top: 3vw">
+    <h2 style="text-align: center; font-size: 2vw">INTERESTED IN <%= @job.title.upcase %>?</h2>
+    <p style="font-size: 1.5vw; font-weight: lighter; text-align: center;">Register to our newsletter and receive every friday the best practices from out content curators in the <%= @job.title %> ! <br><br>
+    <span class="subjob-button">Sign in</span>
+    </p>
+
+  </div>
+</div>
+
+<%= render 'home/footer' %>
+<%#= render 'jobs/components/modal' %>
