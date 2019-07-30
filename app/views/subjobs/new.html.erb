@@ -1,18 +1,18 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-8">
+    <div class="col-12">
       <h3>New subjob</h3>
         <%= simple_form_for Subjob.new do |f| %>
           <%= f.association :job, label_method: lambda { |job| "#{job.title}"} %>
           <%= f.input :title, placeholder: "UX design" %>
-          <%= f.input :description, placeholder: "UX design is dope man" %>
-          <%= f.input :goals, placeholder: "UX design goals are ..." %>
-          <%= f.input :requirements, placeholder: "UX design requirements are ..." %>
-          <%= f.input :tasks, placeholder: "UX design tasks are ..." %>
-          <%= f.input :team_mates, placeholder: "UX design team mates are ..." %>
-          <%= f.input :career, placeholder: "UX design career is ..." %>
-          <%= f.button :submit, "SUIVANT", class: "btn btn-primary margin-right-50" %>
+          <%= f.input :description, placeholder: "UX design is dope man", wrapper_html: { class: 'input-card' }, input_html: {style: 'height:10vh; width: 100%'} %>
+          <%= f.input :goals, placeholder: "UX design goals are ...", wrapper_html: { class: 'input-card' }, input_html: {style: 'height:10vh; width: 100%'} %>
+          <%= f.input :requirements, placeholder: "UX design requirements are ...", wrapper_html: { class: 'input-card' }, input_html: {style: 'height:10vh; width: 100%'} %>
+          <%= f.input :tasks, placeholder: "UX design tasks are ...", wrapper_html: { class: 'input-card' }, input_html: {style: 'height:10vh; width: 100%'} %>
+          <%= f.input :team_mates, placeholder: "UX design team mates are ...", wrapper_html: { class: 'input-card' }, input_html: {style: 'height:10vh; width: 100%'} %>
+          <%= f.input :career, placeholder: "UX design career is ...", wrapper_html: { class: 'input-card' }, input_html: {style: 'height:10vh; width: 100%'} %>
+          <%= f.button :submit, "SUIVANT", class: "btn btn-primary margin-right-50", wrapper_html: { class: 'input-card' }, input_html: {style: 'height:10vh; width: 100%'} %>
         <% end %>
     </div>
   </div>

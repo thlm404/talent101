@@ -13,6 +13,7 @@ class SubjobsController < ApplicationController
   end
 
   def show
+    @jobs = Job.all
     @job = Job.find(params[:id])
     @subjob = Subjob.find(params[:id])
   end
@@ -24,6 +25,6 @@ class SubjobsController < ApplicationController
   end
 
   def subjob_params
-    params.require(:subjob).permit(:job, :job_id, :title, :tag_list, :description) ## Rails 4 strong params usage
+    params.require(:subjob).permit(:job, :job_id, :title, :tag_list, :description, :goals, :requirements, :tasks, :team_mates, :career) ## Rails 4 strong params usage
   end
 end
